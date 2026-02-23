@@ -54,9 +54,9 @@ def threshold_auto(gray: np.ndarray) -> tuple[np.ndarray, int]:
         return mask_bright, T
 
 
-# ============================================================
+
 # 2) Binary morphology (closing) to fill small holes
-# ============================================================
+
 
 def dilate(bin_img: np.ndarray, k: int = 3) -> np.ndarray:
     """Expands white pixels (1s)."""
@@ -99,9 +99,9 @@ def closing(bin_img: np.ndarray, k: int = 3, iters: int = 1) -> np.ndarray:
     return out
 
 
-# ============================================================
+
 # 3) Connected Component Labelling (extract regions)
-# ============================================================
+
 
 def connected_components(bin_img: np.ndarray, connectivity: int = 8):
     """
@@ -158,9 +158,9 @@ def largest_component(bin_img: np.ndarray) -> tuple[np.ndarray, dict | None]:
     return (labels == largest["label"]).astype(np.uint8), largest
 
 
-# ============================================================
+
 # 4) PASS/FAIL analysis helpers
-# ============================================================
+
 
 def count_holes(ring_mask: np.ndarray) -> int:
     """
@@ -343,9 +343,9 @@ def classify_oring(ring_mask: np.ndarray) -> tuple[str, str]:
     return label, reason_text
 
 
-# ============================================================
+
 # 5) Visual output + timing
-# ============================================================
+
 
 def overlay_mask(gray: np.ndarray, mask: np.ndarray) -> np.ndarray:
     """Overlay ring mask in red for easy viewing."""
@@ -423,7 +423,7 @@ def main():
             line = (
                 f"{os.path.basename(p)}\t{info['label']}\t"
                 f"T={info['T']}\t{info['reason']}\t"
-                f"time={info['time_ms']:.1f}ms"
+                f"time={info['time_ms']:.1f}ms" 
             )
             print(line)
             f.write(line + "\n")
