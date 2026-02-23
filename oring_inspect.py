@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 
 
-
+#scscsccs
 # 1) Histogram + automatic threshold (Otsu from scratch)
 
 
