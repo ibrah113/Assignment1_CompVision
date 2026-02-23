@@ -324,7 +324,7 @@ def classify_oring(ring_mask: np.ndarray) -> tuple[str, str]:
         reasons.append(f"holes={holes} (expected 1)")
 
     # Open/broken ring (large missing arc)
-    if max_gap_deg > 18.0:   # you can tune: 12..25 depending on dataset
+    if max_gap_deg > 18.0:   
         fail = True
         reasons.append(f"max_gap_deg={max_gap_deg:.1f}")
 
