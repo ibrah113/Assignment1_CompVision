@@ -7,9 +7,6 @@ import cv2
 import numpy as np
 # 1) Histogram + automatic threshold (Otsu from scratch)
 
-#kwdhwdhwjgd
-
-#sdjbsdh
 
 
 def otsu_threshold(gray: np.ndarray) -> int:
