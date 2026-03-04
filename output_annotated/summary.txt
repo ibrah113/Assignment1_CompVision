@@ -1,0 +1,15 @@
+Oring1.jpg	PASS	T=169	OK	time=1007.4ms
+Oring10.jpg	PASS	T=117	OK	time=787.9ms
+Oring11.jpg	PASS	T=78	OK	time=758.7ms
+Oring12.jpg	PASS	T=125	OK	time=807.2ms
+Oring13.jpg	PASS	T=181	OK	time=763.4ms
+Oring14.jpg	PASS	T=127	OK	time=829.1ms
+Oring15.jpg	FAIL	T=74	min_thick=2.0 (<0.5*med)	time=838.8ms
+Oring2.jpg	PASS	T=120	OK	time=860.1ms
+Oring3.jpg	PASS	T=76	OK	time=754.0ms
+Oring4.jpg	PASS	T=118	OK	time=791.2ms
+Oring5.jpg	FAIL	T=168	holes=0 (expected 1) | min_thick=1.0 (<0.5*med) | thin_frac=0.031	time=811.1ms
+Oring6.jpg	PASS	T=114	OK	time=799.5ms
+Oring7.jpg	FAIL	T=74	holes=0 (expected 1) | min_thick=1.0 (<0.5*med)	time=834.0ms
+Oring8.jpg	PASS	T=123	OK	time=827.0ms
+Oring9.jpg	FAIL	T=167	holes=0 (expected 1) | min_thick=1.0 (<0.5*med) | thin_frac=0.031	time=859.8ms
