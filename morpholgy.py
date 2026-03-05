@@ -1,6 +1,6 @@
 import numpy as np
 
-# This file cleans the binary image using morphology (written from scratch)
+# This file cleans the binary image using morphology
 
 
 def dilate(bin_img: np.ndarray, k: int = 3) -> np.ndarray:

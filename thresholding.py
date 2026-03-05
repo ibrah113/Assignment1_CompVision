@@ -1,6 +1,6 @@
 import numpy as np
 
-# This file finds the threshold using the histogram (automatic)
+# This file finds the threshold using the histogram
 
 
 def otsu_threshold(gray: np.ndarray) -> int:

@@ -1,7 +1,7 @@
 import numpy as np
 from collections import deque
 
-# This file finds connected regions (connected component labelling)
+# This file finds connected regions, connected components
 
 
 def connected_components(bin_img: np.ndarray, connectivity: int = 8):

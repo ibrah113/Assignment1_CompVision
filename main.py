@@ -27,12 +27,12 @@ def overlay_mask(gray: np.ndarray, mask: np.ndarray) -> np.ndarray:
 def process_image(path: str, morph_k: int = 3, morph_iters: int = 1):
     """
     Steps:
-    1) read image
-    2) threshold
-    3) morphology clean
-    4) largest component (ring)
-    5) classify pass/fail
-    6) annotate output
+    1:read image
+    2:threshold
+    3:morphology clean
+    4:largest component (ring)
+    5:classify pass/fail
+    6:annotate output
     """
     t0 = time.perf_counter()
 
@@ -41,13 +41,13 @@ def process_image(path: str, morph_k: int = 3, morph_iters: int = 1):
     if gray is None:
         raise RuntimeError(f"Could not read image: {path}")
 
-    # 1) Threshold (auto from histogram)
+    # 1) Threshold
     bin_mask, T = threshold_auto(gray)
 
-    # 2) Morphology (closing)
+    # 2) Morphology 
     bin_clean = closing(bin_mask, k=morph_k, iters=morph_iters)
 
-    # 3) Keep only largest region (the ring)
+    # 3) Keep only largest region
     ring_mask, _ = largest_component(bin_clean)
 
     # 4) PASS/FAIL
